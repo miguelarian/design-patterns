@@ -1,7 +1,5 @@
 package com.miguelvela;
 
-import ç.Triangle;
-
 public class Main {
     public static void main(String[] args) {
 
