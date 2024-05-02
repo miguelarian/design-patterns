@@ -1,6 +1,4 @@
-package ç;
-
-import com.miguelvela.Shape;
+package com.miguelvela;
 
 public class Triangle implements Shape {
     private double width;
