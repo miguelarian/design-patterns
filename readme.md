@@ -4,7 +4,13 @@ A repository with collection of design patterns written in Java.
 
 ## Index
 
-- [Adapter](./Adapter/readme.md)
+- Creational patterns
+  - TBC
+- Structural patterns
+  - TBC
+- Behavioural patterns
+  - [Adapter](./Adapter/readme.md)
+  - [Strategy](./Strategy/readme.md)
 
 ## Class diagrams generation
 
