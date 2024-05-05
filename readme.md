@@ -5,7 +5,7 @@ A repository with collection of design patterns written in Java.
 ## Index
 
 - Creational patterns
-  - TBC
+  - [Singleton](./Singleton/readme.md)
 - Structural patterns
   - [Adapter](./Adapter/readme.md)
 - Behavioural patterns
