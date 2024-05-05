@@ -1,13 +1,10 @@
 @startuml class-diagram
-interface QuackBehaviour {
-    + quack(): void
+class Database {
+    - data: List<String>
+    - <<static>> instance: Database
+    + Database(List<String> data)
+    + <<static>> getInstance(List<String> data): Database
 }
-class RubberDuckBehaviour implements QuackBehaviour
-class WildDuckBehaviour implements QuackBehaviour
-class Duck
-class Main {
-    - ducks: List<Duck>
-}
-Duck *--> QuackBehaviour : has-a
-Main --> Duck : uses
+class Main
+Main --> Database : uses
 @enduml
