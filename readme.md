@@ -7,9 +7,8 @@ A repository with collection of design patterns written in Java.
 - Creational patterns
   - TBC
 - Structural patterns
-  - TBC
-- Behavioural patterns
   - [Adapter](./Adapter/readme.md)
+- Behavioural patterns
   - [Strategy](./Strategy/readme.md)
 
 ## Class diagrams generation
