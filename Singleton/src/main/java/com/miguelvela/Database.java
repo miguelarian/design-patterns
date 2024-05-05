@@ -3,7 +3,7 @@ package com.miguelvela;
 import java.util.List;
 
 public class Database {
-    private List<String> data;
+    private final List<String> data;
     private static Database instance;
 
     private Database(List<String> data) {
