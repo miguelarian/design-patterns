@@ -1,6 +1,6 @@
 @startuml class-diagram
 interface QuackBehaviour {
-    + quack(): void
+    quack(): void
 }
 class RubberDuckBehaviour implements QuackBehaviour
 class WildDuckBehaviour implements QuackBehaviour
@@ -8,6 +8,6 @@ class Duck
 class Main {
     - ducks: List<Duck>
 }
-Duck *--> QuackBehaviour : has-a
-Main --> Duck : uses
+Duck *-right-> QuackBehaviour : has-a
+Main -right-> Duck : uses
 @enduml
