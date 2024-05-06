@@ -1,7 +1,7 @@
 @startuml class-diagram
 interface Shape {
-    + getArea(): double
-    + getPerimeter(): double
+    getArea(): double
+    getPerimeter(): double
 }
 class Triangle implements Shape {
     - base: double
@@ -33,5 +33,5 @@ class Main {
     - shapes: List<Shape>
 }
 RectangleAdapter --> Rectangle : "has-a rectangle adaptee"
-Main --> Shape : uses
+Main -right-> Shape : uses
 @enduml
