@@ -1,0 +1,17 @@
+@startuml class-diagram
+interface Observable {
+    publish(String message)
+    subscribe(Observer observer) 
+    unsubscribe(Observer observer) 
+}
+interface Observer {
+    update(String article)
+}
+class Newsletter implements Observable {
+    - subscribers: List<Subscriber>
+}
+class Subscriber implements Observer
+Observable o-right- Observer : "0..*"
+class Main
+Main -right-> Observable : uses
+@enduml
