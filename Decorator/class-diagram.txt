@@ -9,7 +9,7 @@ class UserRepositoryDecorator {
     - userRepository: UserRepository
 }
 class RedisUserRepository extends UserRepositoryDecorator {
-    - redisData: List<String>: UserRepository
+    - redisData: List<String>
 }
 class Main
 Main -right-> UserRepository : uses
