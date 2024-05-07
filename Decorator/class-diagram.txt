@@ -1,0 +1,19 @@
+@startuml class-diagram
+interface UserRepository {
+    + String: getUserByName(String name)
+}
+class UserRepositoryImpl {
+    - database: List<String>    
+}
+class UserRepositoryDecorator {
+    - userRepository: UserRepository
+}
+class RedisUserRepository extends UserRepositoryDecorator {
+    - redisData: List<String>: UserRepository
+}
+class Main
+Main -right-> UserRepository : uses
+UserRepository <|-[dashed]- UserRepositoryImpl : "implements"
+UserRepository <|-[dashed]- UserRepositoryDecorator : "implements"
+UserRepositoryDecorator o-right-> UserRepository : "has-a"
+@enduml
