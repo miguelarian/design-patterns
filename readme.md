@@ -8,6 +8,7 @@ A repository with collection of design patterns written in Java.
   - [Singleton](./Singleton/readme.md)
 - Structural patterns
   - [Adapter](./Adapter/readme.md)
+  - [Decorator](./Decorator/readme.md)
 - Behavioural patterns
   - [Strategy](./Strategy/readme.md)
   - [Observer](./Observer/readme.md)
