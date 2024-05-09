@@ -18,11 +18,11 @@ class HumansCharacterFactory implements CharactersFactory
 class ElfCharactersFactory implements CharactersFactory
 class DwarfCharactersFactory implements CharactersFactory
 HumansCharacterFactory -[#blue,dotted]-> SoldierHuman
-HumansCharacterFactory -[#green,dotted]-> MageHuman
-ElfCharactersFactory -[#blue,dotted]-> SoldierElf
+HumansCharacterFactory -[#blue,dotted]-> MageHuman
+ElfCharactersFactory -[#green,dotted]-> SoldierElf
 ElfCharactersFactory -[#green,dotted]-> MageElf
-DwarfCharactersFactory -[#blue,dotted]-> SoldierDwarf
-DwarfCharactersFactory -[#green,dotted]-> MageDwarf
+DwarfCharactersFactory -[#red,dotted]-> SoldierDwarf
+DwarfCharactersFactory -[#red,dotted]-> MageDwarf
 class Main
 Main -right-> CharactersFactory : uses
 CharactersFactory -right-> Character : creates
