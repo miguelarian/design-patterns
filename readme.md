@@ -7,6 +7,7 @@ A repository with collection of design patterns written in Java.
 - Creational patterns
   - [Singleton](./Singleton/readme.md)
   - [Factory method](./FactoryMethod/readme.md)
+  - [Abstract Factory](./AbstractFactory/readme.md)
 - Structural patterns
   - [Adapter](./Adapter/readme.md)
   - [Decorator](./Decorator/readme.md)
