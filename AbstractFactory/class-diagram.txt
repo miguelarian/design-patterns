@@ -1,0 +1,29 @@
+@startuml class-diagram
+abstract class Character {
+    ~ int lifepoints
+}
+class Soldier extends Character
+class Mage extends Character
+class SoldierHuman extends Soldier
+class SoldierElf extends Soldier
+class SoldierDwarf extends Soldier
+class MageHuman extends Mage
+class MageElf extends Mage
+class MageDwarf extends Mage
+interface CharactersFactory {
+    Soldier createSoldier()
+    Mage createMage()
+}
+class HumansCharacterFactory implements CharactersFactory
+class ElfCharactersFactory implements CharactersFactory
+class DwarfCharactersFactory implements CharactersFactory
+HumansCharacterFactory -[#blue,dotted]-> SoldierHuman
+HumansCharacterFactory -[#green,dotted]-> MageHuman
+ElfCharactersFactory -[#blue,dotted]-> SoldierElf
+ElfCharactersFactory -[#green,dotted]-> MageElf
+DwarfCharactersFactory -[#blue,dotted]-> SoldierDwarf
+DwarfCharactersFactory -[#green,dotted]-> MageDwarf
+class Main
+Main -right-> CharactersFactory : uses
+CharactersFactory -right-> Character : creates
+@enduml
