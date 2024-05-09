@@ -1,0 +1,16 @@
+@startuml class-diagram
+abstract class Shape {
+    + void draw()
+}
+class Rectangle extends Shape
+class Triange extends Shape
+class Circle extends Shape
+interface ShapesFactory {
+    Shape create()
+}
+class RandomShapesFactory implements ShapesFactory
+class SequentialShapesFactory implements ShapesFactory
+ShapesFactory -right-> Shape : creates
+class Main
+Main -right-> ShapesFactory : uses
+@enduml
