@@ -1,6 +1,13 @@
 # Design Patterns
 
-A repository with collection of design patterns written in Java.
+This is a repository with collection of design patterns written in Java.
+
+## Context
+
+In many interviews, I've been asked about design patterns. Talking about patterns is a nice conversation, but it is even better when you can support this conversation with real examples or some coding examples. 
+
+I created this repository for that purpose. The examples may not be perfect or differ from traditional books. These differences are also a good opportunity for interviews and debate.
+
 
 ## Index
 
