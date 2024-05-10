@@ -8,7 +8,7 @@ public class Main {
         while(count < 10) {
             try {
                 trafficLight.printState();
-                trafficLight.next();
+                trafficLight.nextState();
                 Thread.sleep(1000);
                 count++;
             } catch (InterruptedException e) {

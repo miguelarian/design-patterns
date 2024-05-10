@@ -26,7 +26,7 @@ public class TrafficLight {
         return currentState;
     }
 
-    public void next() {
+    public void nextState() {
         this.getCurrentState().nextstate(this);
     }
 }
