@@ -1,0 +1,21 @@
+@startuml class-diagram
+class TrafficLight {
+    - State currentState
+    - State previousState
+    + setState(State newState) : void
+    + getPreviousState() : State
+    + getCurrentState() : State
+    + nextState() : void
+    + printState() : void
+}
+interface State {
+    void nextstate(TrafficLight trafficLight)
+    void printState()
+}
+TrafficLight -right-> State : "has-a state"
+class StateRed implements State
+class StateYellow implements State
+class StateGreen implements State
+class Main
+Main -right-> TrafficLight : uses
+@enduml
