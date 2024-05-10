@@ -12,6 +12,7 @@ A repository with collection of design patterns written in Java.
   - [Adapter](./Adapter/readme.md)
   - [Decorator](./Decorator/readme.md)
 - Behavioural patterns
+  - [State](./State/readme.md)
   - [Strategy](./Strategy/readme.md)
   - [Observer](./Observer/readme.md)
 
