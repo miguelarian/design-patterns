@@ -28,13 +28,13 @@ I created this repository for that purpose. The examples may not be perfect or d
 
 The class diagrams are generated using [PlantUML](https://github.com/plantuml/plantuml).
 
-You generate the images from the corresponding markdown file code. Example:
+You can generate the class diagram images from the corresponding markdown file code using inline plantUML syntax. 
 
 ```bash
 plantuml -tsvg ./Adapter/readme.md
 ```
 
-You can also use the plantuml jar file from the root folder. Example:
+You can also use the plantuml jar file from the root folder. 
 
 ```bash
 java -jar plantuml-mit-1.2024.4.jar ./Adapter/class-diagram.txt -tsvg
