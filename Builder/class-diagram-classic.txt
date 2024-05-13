@@ -1,0 +1,25 @@
+@startuml class-diagram
+class Menu {
+    - String appetizer;
+    - String main;
+    - String side;
+    - String beverage;
+    - String dessert;
+}
+interface MenuBuilder{
+    void appetizer(String appetizer);
+    void main(String main);
+    void side(String side);
+    void beverage(String beverage);
+    void dessert(String dessert);
+    Menu order();
+}
+class AmericanMenuBuilder implements MenuBuilder {
+
+}
+class ItalianMenuBuilder implements MenuBuilder {
+
+}
+Main -right-> MenuBuilder : uses
+MenuBuilder -right-> Menu : produces
+@enduml
