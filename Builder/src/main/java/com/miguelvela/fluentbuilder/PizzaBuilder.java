@@ -1,4 +1,4 @@
-package com.miguelvela;
+package com.miguelvela.fluentbuilder;
 
 import java.util.ArrayList;
 
