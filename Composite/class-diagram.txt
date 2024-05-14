@@ -5,12 +5,16 @@ interface Task {
     + void display()
 }
 class SimpleTask implements Task {
+    + String getTask()
+    + void setTask()
     + void display()
 }
 class CompositeTask implements Task {
     - List<Task> tasks
     + void addTask(Task task)
     + void removeTask(Task task)
+    + String getTask()
+    + void setTask()
     + void display()
 }
 class Main
