@@ -1,5 +1,6 @@
 package com.miguelvela;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -17,9 +18,15 @@ public class Main {
 
         Task indoorTasks = new CompositeTask("Indoor house work", List.of(vacuuming, dusting));
 
-        Task houseWork = new CompositeTask("House work", List.of(outdoorTasks, indoorTasks));
+        Task houseWork = new CompositeTask("House work", new ArrayList<>());
+        ((CompositeTask) houseWork).addTask(indoorTasks);
+        ((CompositeTask) houseWork).addTask(outdoorTasks);
 
         System.out.println("Weekend plan:");
+        houseWork.display();
+
+        System.out.println("Outdoor tasks:");
+        ((CompositeTask) houseWork).removeTask(indoorTasks);
         houseWork.display();
     }
 }
