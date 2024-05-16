@@ -1,0 +1,28 @@
+@startuml class-diagram
+class TreeNode {
+    - String value
+    - TreeNode left
+    - TreeNode right
+}
+interface TreeIterable {
+    TreeIterator getTreeIterator()
+}
+class InorderTreeIterable implements TreeIterable
+class PreorderTreeIterable implements TreeIterable
+class PostorderTreeIterable implements TreeIterable
+interface TreeIterator {
+    boolean hasNext()
+    TreeNode next()
+    TreeNode current()
+}
+class InorderTreeIterator implements TreeIterator
+class PreorderTreeIterator implements TreeIterator
+class PostorderTreeIterator implements TreeIterator
+class Main
+Main -right-> TreeIterable : uses
+Main -left-> TreeIterator : uses
+TreeIterator -left-> TreeNode : iterates
+InorderTreeIterable -right[#red,dotted]-> InorderTreeIterator : produces
+PreorderTreeIterable -right[#green,dotted]-> PreorderTreeIterator : produces
+PostorderTreeIterable -right[#blue,dotted]-> PostorderTreeIterator : produces
+@enduml
