@@ -24,6 +24,7 @@ I created this repository for that purpose. The examples may not be perfect or d
   - [State](./State/readme.md)
   - [Strategy](./Strategy/readme.md)
   - [Observer](./Observer/readme.md)
+  - [Iterator](./Iterator/readme.md)
 
 ## Class diagrams generation
 
