@@ -8,26 +8,24 @@ public class Main {
 
         TreeNode tree = buildDemoTree();
         List<String> nodeValues = null;
+        TreeIterator iterator = null;
 
         System.out.println("--- Inorder Traversal -----------");
-        TreeIterable inorderTreeIterable = new InorderTreeIterable(tree);
-        TreeIterator inorderTreeIterator = inorderTreeIterable.getTreeIterator();
-        nodeValues = getTraversal(inorderTreeIterator);
+        iterator = new InorderTreeIterable(tree).getTreeIterator();
+        nodeValues = getTraversal(iterator);
         System.out.println(nodeValues);
         System.out.println("---------------------------------");
 
 
         System.out.println("--- Preorder Traversal -----------");
-        TreeIterable preorderTreeIterable = new PreorderTreeIterable(tree);
-        TreeIterator preorderTreeIterator = preorderTreeIterable.getTreeIterator();
-        nodeValues = getTraversal(preorderTreeIterator);
+        iterator = new PreorderTreeIterable(tree).getTreeIterator();
+        nodeValues = getTraversal(iterator);
         System.out.println(nodeValues);
         System.out.println("---------------------------------");
 
         System.out.println("--- Postorder Traversal -----------");
-        TreeIterable postorderTreeIterable = new PostorderTreeIterable(tree);
-        TreeIterator postorderTreeIterator = postorderTreeIterable.getTreeIterator();
-        nodeValues = getTraversal(postorderTreeIterator);
+        iterator = new PostorderTreeIterable(tree).getTreeIterator();
+        nodeValues = getTraversal(iterator);
         System.out.println(nodeValues);
         System.out.println("---------------------------------");
     }
