@@ -7,24 +7,21 @@ public class Main {
     public static void main(String[] args) {
 
         TreeNode tree = buildDemoTree();
-        List<String> nodeValues = null;
         TreeIterator iterator = null;
 
-        System.out.println("--- Inorder Traversal -----------");
         iterator = new InorderTreeIterable(tree).getTreeIterator();
-        nodeValues = getTraversal(iterator);
-        System.out.println(nodeValues);
-        System.out.println("---------------------------------");
+        printTraversal(iterator, "Inorder Traversal");
 
-
-        System.out.println("--- Preorder Traversal -----------");
         iterator = new PreorderTreeIterable(tree).getTreeIterator();
-        nodeValues = getTraversal(iterator);
-        System.out.println(nodeValues);
-        System.out.println("---------------------------------");
+        printTraversal(iterator, "Preorder Traversal");
 
-        System.out.println("--- Postorder Traversal -----------");
         iterator = new PostorderTreeIterable(tree).getTreeIterator();
+        printTraversal(iterator, "Postorder Traversal");
+    }
+
+    private static void printTraversal(TreeIterator iterator, String traversalType) {
+        List<String> nodeValues;
+        System.out.println("[" + traversalType.toUpperCase() + "]");
         nodeValues = getTraversal(iterator);
         System.out.println(nodeValues);
         System.out.println("---------------------------------");
