@@ -1,6 +1,6 @@
-# Decorator pattern
+# Proxy pattern
 
-*"Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors."* - [source](https://refactoring.guru/design-patterns/decorator)
+*"Proxy is a structural design pattern that lets you provide a substitute or placeholder for another object. A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object."* - [source](https://refactoring.guru/design-patterns/proxy)
 
 ## Class diagram
 
