@@ -1,8 +1,8 @@
 @startuml class-diagram
 interface Task {
-    + String getTask()
-    + void setTask()
-    + void display()
+    String getTask()
+    void setTask()
+    void display()
 }
 class SimpleTask implements Task {
     + String getTask()
@@ -10,7 +10,7 @@ class SimpleTask implements Task {
     + void display()
 }
 class CompositeTask implements Task {
-    - List<Task> tasks
+    - tasks : List<Task>
     + void addTask(Task task)
     + void removeTask(Task task)
     + String getTask()
