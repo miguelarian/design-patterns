@@ -1,6 +1,6 @@
 @startuml class-diagram
 interface UserRepository {
-    + String: getUserByName(String name)
+    String getUserByName(String name)
 }
 class UserRepositoryImpl {
     - database: List<String>    
