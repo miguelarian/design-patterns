@@ -20,6 +20,7 @@ I created this repository for that purpose. The examples may not be perfect or d
   - [Adapter](./Adapter/readme.md)
   - [Decorator](./Decorator/readme.md)
   - [Composite](./Composite/readme.md)
+  - [Proxy](./Proxy/readme.md)
 - Behavioural patterns
   - [State](./State/readme.md)
   - [Strategy](./Strategy/readme.md)
