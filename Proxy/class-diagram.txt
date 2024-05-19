@@ -1,0 +1,25 @@
+@startuml class-diagram
+interface UserApi {
+    String getUsers()
+    String getUsersById(int userId)
+}
+class User {
+    + id : int
+    + name : String
+}
+class UserApiClient implements UserApi{
+    - users: User[]
+    + String getUsers()
+    + String getUsersById(int userId)
+}
+class UserApiProxy implements UserApi {
+    - requestsCounter : int
+    + String getUsers()
+    + String getUsersById(int userId)
+    + int getRequestCounter()
+}
+class Main
+Main -right-> UserApiProxy : uses
+UserApiProxy o-right-> UserApiClient : "has-a"
+UserApiClient::users o-right-> User : 0..*
+@enduml
