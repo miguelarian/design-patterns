@@ -27,6 +27,7 @@ I created this repository for that purpose. The examples may not be perfect or d
   - [Strategy](./Strategy/readme.md)
   - [Observer](./Observer/readme.md)
   - [Iterator](./Iterator/readme.md)
+  - [Chain of Responsibility](./ChainOfResponsibility/readme.md)
 
 ## Class diagrams generation
 
