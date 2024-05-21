@@ -1,16 +1,15 @@
 package com.miguelvela;
 
-public class UnsupportedOperation implements OperationChain {
+public class UnsupportedOperation extends BaseOperation {
     private OperationChain nextChain;
 
     @Override
-    public OperationChain setNextChain(OperationChain nextChain) {
-        this.nextChain = nextChain;
-        return this.nextChain;
+    protected boolean canIHandleOperation(MathOperation operation) {
+        return false;
     }
 
     @Override
-    public void calculate(MathOperation operation) {
+    protected void handleOperation(MathOperation operation) {
         System.out.println("Unsupported operation: " + operation.getOperation());
     }
 }
