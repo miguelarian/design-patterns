@@ -11,18 +11,18 @@ public class DivideOperation implements OperationChain {
     }
 
     @Override
-    public void calculate(MathOperation request) {
-        if (!request.getOperation().equals(DIVIDE)) {
-            nextChain.calculate(request);
+    public void calculate(MathOperation operation) {
+        if (!operation.getOperation().equals(DIVIDE)) {
+            nextChain.calculate(operation);
             return;
         }
 
         System.out.println("Division operation");
         System.out.println(
-                request.getOperator1() +
+                operation.getOperator1() +
                 " / " +
-                request.getOperator2() +
+                operation.getOperator2() +
                 " = " +
-                (request.getOperator1() / request.getOperator2()));
+                (operation.getOperator1() / operation.getOperator2()));
     }
 }

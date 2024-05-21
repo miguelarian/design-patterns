@@ -10,7 +10,7 @@ public class UnsupportedOperation implements OperationChain {
     }
 
     @Override
-    public void calculate(MathOperation request) {
-        System.out.println("Unsupported operation: " + request.getOperation());
+    public void calculate(MathOperation operation) {
+        System.out.println("Unsupported operation: " + operation.getOperation());
     }
 }
