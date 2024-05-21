@@ -1,22 +1,15 @@
 package com.miguelvela;
 
-public class MultiplyOperation implements OperationChain {
+public class MultiplyOperation extends BaseOperation {
     public static final String MULTIPLY = "mul";
-    private OperationChain nextChain;
 
     @Override
-    public OperationChain setNextChain(OperationChain nextChain) {
-        this.nextChain = nextChain;
-        return this.nextChain;
+    protected boolean canIHandleOperation(MathOperation operation) {
+        return operation.getOperation().equals(MULTIPLY);
     }
 
     @Override
-    public void calculate(MathOperation operation) {
-        if (!operation.getOperation().equals(MULTIPLY)) {
-            nextChain.calculate(operation);
-            return;
-        }
-
+    protected void handleOperation(MathOperation operation) {
         System.out.println("Multiplication operation");
         System.out.println(
                 operation.getOperator1() +

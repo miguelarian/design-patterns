@@ -1,22 +1,16 @@
 package com.miguelvela;
 
-public class SubtractOperation implements OperationChain {
+public class SubtractOperation extends BaseOperation {
+
     public static final String SUBTRACT = "sub";
-    private OperationChain nextChain;
 
     @Override
-    public OperationChain setNextChain(OperationChain nextChain) {
-        this.nextChain = nextChain;
-        return this.nextChain;
+    protected boolean canIHandleOperation(MathOperation operation) {
+        return operation.getOperation().equals(SUBTRACT);
     }
 
     @Override
-    public void calculate(MathOperation operation) {
-        if (!operation.getOperation().equals(SUBTRACT)) {
-            nextChain.calculate(operation);
-            return;
-        }
-
+    protected void handleOperation(MathOperation operation) {
         System.out.println("Subtraction operation");
         System.out.println(
                 operation.getOperator1() +

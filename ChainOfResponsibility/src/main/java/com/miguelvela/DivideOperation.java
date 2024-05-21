@@ -1,22 +1,15 @@
 package com.miguelvela;
 
-public class DivideOperation implements OperationChain {
+public class DivideOperation extends BaseOperation {
     public static final String DIVIDE = "div";
-    private OperationChain nextChain;
 
     @Override
-    public OperationChain setNextChain(OperationChain nextChain) {
-        this.nextChain = nextChain;
-        return this.nextChain;
+    protected boolean canIHandleOperation(MathOperation operation) {
+        return operation.getOperation().equals(DIVIDE);
     }
 
     @Override
-    public void calculate(MathOperation operation) {
-        if (!operation.getOperation().equals(DIVIDE)) {
-            nextChain.calculate(operation);
-            return;
-        }
-
+    protected void handleOperation(MathOperation operation) {
         System.out.println("Division operation");
         System.out.println(
                 operation.getOperator1() +

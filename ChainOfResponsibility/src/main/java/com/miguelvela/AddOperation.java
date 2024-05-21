@@ -1,23 +1,16 @@
 package com.miguelvela;
 
-public class AddOperation implements OperationChain {
+public final class AddOperation extends BaseOperation {
 
     public static final String ADD = "add";
-    private OperationChain nextChain;
 
     @Override
-    public OperationChain setNextChain(OperationChain nextChain) {
-        this.nextChain = nextChain;
-        return this.nextChain ;
+    protected boolean canIHandleOperation(MathOperation operation) {
+        return operation.getOperation().equals(ADD);
     }
 
     @Override
-    public void calculate(MathOperation operation) {
-        if (!operation.getOperation().equals(ADD)) {
-            nextChain.calculate(operation);
-            return;
-        }
-
+    protected void handleOperation(MathOperation operation) {
         System.out.println("Addition operation");
         System.out.println(
                 operation.getOperator1() +
