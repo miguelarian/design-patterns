@@ -2,7 +2,7 @@
 interface Cloneable {
     Animal makeCopy()
 }
-class Animal implements Cloneable {
+abstract class Animal implements Cloneable {
     - name: String
     + String getName()
     + Animal {abstract} makeCopy()
