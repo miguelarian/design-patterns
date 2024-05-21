@@ -1,0 +1,15 @@
+@startuml class-diagram
+interface Cloneable {
+    Animal makeCopy()
+}
+class Animal implements Cloneable {
+    - name: String
+    + String getName()
+    + Animal {abstract} makeCopy()
+}
+class Sheep extends Animal{
+    + Animal makeCopy()
+}
+Main -right[dotted]-> Animal : creates
+Main -right-> Cloneable : clones
+@enduml
