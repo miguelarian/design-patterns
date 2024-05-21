@@ -16,6 +16,7 @@ I created this repository for that purpose. The examples may not be perfect or d
   - [Factory method](./FactoryMethod/readme.md)
   - [Abstract Factory](./AbstractFactory/readme.md)
   - [Builder (fluent version)](./Builder/readme.md)
+  - [Prototype](./Prototype/readme.md)
 - Structural patterns
   - [Adapter](./Adapter/readme.md)
   - [Decorator](./Decorator/readme.md)
