@@ -1,7 +1,7 @@
 package com.miguelvela;
 
-public class SubstractOperation implements OperationChain {
-    public static final String SUBSTRACT = "sub";
+public class SubtractOperation implements OperationChain {
+    public static final String SUBTRACT = "sub";
     private OperationChain nextChain;
 
     @Override
@@ -12,7 +12,7 @@ public class SubstractOperation implements OperationChain {
 
     @Override
     public void calculate(MathOperation operation) {
-        if (!operation.getOperation().equals(SUBSTRACT)) {
+        if (!operation.getOperation().equals(SUBTRACT)) {
             nextChain.calculate(operation);
             return;
         }

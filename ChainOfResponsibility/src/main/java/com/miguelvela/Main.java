@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         OperationChain chain = new AddOperation();
-        OperationChain sub = new SubstractOperation();
+        OperationChain sub = new SubtractOperation();
         OperationChain mul = new MultiplyOperation();
         OperationChain div = new DivideOperation();
         OperationChain unsupportedOperation = new UnsupportedOperation();
@@ -18,7 +18,7 @@ public class Main {
 
         MathOperation addOperation = new MathOperation(4, 2, AddOperation.ADD);
         chain.calculate(addOperation);
-        MathOperation subOperation = new MathOperation(4, 2, SubstractOperation.SUBSTRACT);
+        MathOperation subOperation = new MathOperation(4, 2, SubtractOperation.SUBTRACT);
         chain.calculate(subOperation);
         MathOperation mulOperation = new MathOperation(4, 2, MultiplyOperation.MULTIPLY);
         chain.calculate(mulOperation);

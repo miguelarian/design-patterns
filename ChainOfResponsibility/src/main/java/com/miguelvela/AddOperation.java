@@ -8,7 +8,7 @@ public class AddOperation implements OperationChain {
     @Override
     public OperationChain setNextChain(OperationChain nextChain) {
         this.nextChain = nextChain;
-        return this.nextChain;
+        return this.nextChain ;
     }
 
     @Override
