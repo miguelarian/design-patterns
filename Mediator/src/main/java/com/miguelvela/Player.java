@@ -1,13 +1,13 @@
 package com.miguelvela;
 
 public abstract class Player {
-    protected GameMediator mediator;
+    protected GameMediator gameServer;
     protected String id;
     protected int lifePoints;
     private static final int INITIAL_LIFEPOINTS = 50;
 
     public Player(GameMediator mediator, String playerId) {
-        this.mediator = mediator;
+        this.gameServer = mediator;
         this.id = playerId;
         this.lifePoints = INITIAL_LIFEPOINTS;
     }
@@ -33,7 +33,7 @@ public abstract class Player {
     }
 
     protected void sendMessage(String playerId, String message) {
-        this.mediator.sendMessage(playerId, message);
+        this.gameServer.sendMessage(playerId, message);
     }
 
     protected abstract void executeAction(String playerId);

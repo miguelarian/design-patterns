@@ -10,6 +10,6 @@ public class Soldier extends Player {
 
     @Override
     protected void executeAction(String playerId) {
-        this.mediator.attack(playerId, POWER_POINTS);
+        this.gameServer.attack(playerId, POWER_POINTS);
     }
 }
