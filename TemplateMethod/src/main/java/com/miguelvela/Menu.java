@@ -10,7 +10,7 @@ public abstract class Menu {
     protected abstract String desserts();
     protected abstract double price();
 
-    private String menuTemplate = """
+    private final String menuTemplate = """
         --------------------
         Menu: %s
         --------------------
