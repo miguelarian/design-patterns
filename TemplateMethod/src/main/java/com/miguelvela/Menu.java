@@ -5,9 +5,9 @@ public abstract class Menu {
     protected String[] drinks = {"Water", "Soda", "Beer", "Wine"};
 
     protected abstract String name();
-    protected abstract String appetizer();
-    protected abstract String main();
-    protected abstract String dessert();
+    protected abstract String appetizers();
+    protected abstract String mains();
+    protected abstract String desserts();
     protected abstract double price();
 
     private String menuTemplate = """
@@ -31,7 +31,7 @@ public abstract class Menu {
         """;
 
     public String printMenu() {
-        return String.format(menuTemplate, name(), getRandomDring(), appetizer(), main(), dessert(), price());
+        return String.format(menuTemplate, name(), getRandomDring(), appetizers(), mains(), desserts(), price());
     }
 
     private String getRandomDring() {

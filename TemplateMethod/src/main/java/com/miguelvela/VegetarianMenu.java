@@ -12,17 +12,17 @@ public class VegetarianMenu extends Menu {
         }
 
         @Override
-        protected final String appetizer() {
+        protected final String appetizers() {
             return String.join(", ", appetizers);
         }
 
         @Override
-        protected final String main() {
+        protected final String mains() {
             return String.join(", ", mains);
         }
 
         @Override
-        protected final String dessert() {
+        protected final String desserts() {
             return String.join(", ", desserts);
         }
 
