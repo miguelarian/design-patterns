@@ -1,0 +1,50 @@
+@startuml class-diagram
+class MathOperation {
+    - operator1 : double
+    - operator2 : double
+    - operation : String
+    + double getOperator1()
+    + double getOperator2()
+    + String getOperator()
+}
+interface OperationChain {
+    OperationChain setNextChain(OperationChain nextChain)
+    void calculate(MathOperation operation)
+}
+abstract class BaseOperation implements OperationChain {
+    - {static} ADD : String
+    - nextChain : OperationChain
+    + OperationChain setNextChain(OperationChain nextChain)
+    + void calculate()
+    ~ boolean {abstract} canIHandleOperation(MathOperation operation)
+    ~ void {abstract} handleOperation(MathOperation operation)
+}
+class AddOperation extends BaseOperation {
+    - {static} ADD : String
+    ~ boolean canIHandleOperation(MathOperation operation)
+    ~ void handleOperation(MathOperation operation)
+}
+class SubtractOperation extends BaseOperation {
+    - {static} SUBTRACT : String
+    ~ boolean canIHandleOperation(MathOperation operation)
+    ~ void handleOperation(MathOperation operation)
+}
+class MultiplyOperation extends BaseOperation {
+    - {static} MULTIPLY : String
+    ~ boolean canIHandleOperation(MathOperation operation)
+    ~ void handleOperation(MathOperation operation)
+}
+class DivideOperation extends BaseOperation {
+    - {static} DIVIDE : String
+    ~ boolean canIHandleOperation(MathOperation operation)
+    ~ void handleOperation(MathOperation operation)
+}
+class UnsupportedOperation extends BaseOperation {
+    ~ boolean canIHandleOperation(MathOperation operation)
+    ~ void handleOperation(MathOperation operation)
+}
+class Main
+Main -left-> MathOperation : uses
+Main -right-> OperationChain : creates
+BaseOperation::nextChain o--> OperationChain
+@enduml
