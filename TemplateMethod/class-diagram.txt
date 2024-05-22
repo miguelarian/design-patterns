@@ -1,0 +1,37 @@
+@startuml class-diagram
+
+abstract class Menu {
+    - drinks : String[]
+    - menuTemplate : String
+    ~ String name()
+    ~ String appetizers()
+    ~ String mains()
+    ~ String desserts()
+    ~ String price()
+    + String printMenu()
+}
+class StandardMenu extends Menu {
+    - appetizers : String[]
+    - mains : String[]
+    - desserts : String[]
+    - price : double
+    ~ String name()
+    ~ String appetizers()
+    ~ String mains()
+    ~ String desserts()
+    ~ String price()
+}
+class VegetarianMenu extends Menu {
+    - appetizers : String[]
+    - mains : String[]
+    - desserts : String[]
+    - price : double
+    ~ String name()
+    ~ String appetizers()
+    ~ String mains()
+    ~ String desserts()
+    ~ String price()
+}
+class Main
+Main o-right-> Menu : offers
+@enduml
