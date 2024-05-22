@@ -28,6 +28,7 @@ I created this repository for that purpose. The examples may not be perfect or d
   - [Observer](./Observer/readme.md)
   - [Iterator](./Iterator/readme.md)
   - [Chain of Responsibility](./ChainOfResponsibility/readme.md)
+  - [Mediator](./Mediator/readme.md)
 
 ## Class diagrams generation
 
