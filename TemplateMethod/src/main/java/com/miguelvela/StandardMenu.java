@@ -4,7 +4,7 @@ public class StandardMenu extends Menu {
 
     private String[] appetizers = {"Bruschetta", "Calamari", "Caprese Salad"};
     private String[] mains = {"Spaghetti Carbonara", "Chicken Parmesan", "Lasagna"};
-    private String[] desserts = {"Tiramisu", "Cannoli", "Gelato"};
+    private String[] desserts = {"Tiramisu", "3 Chocolates cake", "Gelato"};
     private double price = 10.00d;
 
     @Override

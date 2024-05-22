@@ -2,7 +2,7 @@ package com.miguelvela;public class VegetarianMenu extends Menu {
 
         private String[] appetizers = {"Bruschetta", "Caprese Salad"};
         private String[] mains = {"Spaghetti Pomodoro", "Eggplant Parmesan", "Fettuccine Alfredo"};
-        private String[] desserts = {"Tiramisu", "Cannoli", "Gelato"};
+        private String[] desserts = {"Green Tiramisu", "Vegan Gelato"};
         private double price = 12.00d;
 
         @Override
