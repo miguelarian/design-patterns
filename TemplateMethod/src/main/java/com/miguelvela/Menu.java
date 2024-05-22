@@ -2,7 +2,7 @@ package com.miguelvela;
 
 public abstract class Menu {
 
-    protected String[] drinks = {"Water", "Soda", "Beer", "Wine"};
+    private String[] drinks = {"Water", "Soda", "Beer", "Wine"};
 
     protected abstract String name();
     protected abstract String appetizers();
@@ -31,10 +31,10 @@ public abstract class Menu {
         """;
 
     public String printMenu() {
-        return String.format(menuTemplate, name(), getRandomDring(), appetizers(), mains(), desserts(), price());
+        return String.format(menuTemplate, name(), drinks(), appetizers(), mains(), desserts(), price());
     }
 
-    private String getRandomDring() {
+    private String drinks() {
         return String.join(", ", drinks);
     }
 }
