@@ -9,7 +9,7 @@ public class Soldier extends Player {
     }
 
     @Override
-    protected void executeAction(String playerId) {
+    protected final void executeAction(String playerId) {
         this.gameServer.attack(playerId, POWER_POINTS);
     }
 }

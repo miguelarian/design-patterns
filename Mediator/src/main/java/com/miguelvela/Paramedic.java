@@ -8,7 +8,7 @@ public class Paramedic extends Player {
     }
 
     @Override
-    protected void executeAction(String playerId) {
+    protected final void executeAction(String playerId) {
         this.gameServer.cure(playerId, POWER_POINTS);
     }
 }
