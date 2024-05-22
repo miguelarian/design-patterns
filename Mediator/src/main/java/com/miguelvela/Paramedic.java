@@ -3,7 +3,7 @@ package com.miguelvela;
 public class Paramedic extends Player {
     private static final int POWER_POINTS = 10;
 
-    public Paramedic(Mediator mediator, String playerId) {
+    public Paramedic(GameMediator mediator, String playerId) {
         super(mediator, playerId);
     }
 

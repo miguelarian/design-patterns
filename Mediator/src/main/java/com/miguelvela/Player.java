@@ -1,12 +1,12 @@
 package com.miguelvela;
 
 public abstract class Player {
-    protected Mediator mediator;
+    protected GameMediator mediator;
     protected String id;
     protected int lifePoints;
     private static final int INITIAL_LIFEPOINTS = 50;
 
-    public Player(Mediator mediator, String playerId) {
+    public Player(GameMediator mediator, String playerId) {
         this.mediator = mediator;
         this.id = playerId;
         this.lifePoints = INITIAL_LIFEPOINTS;

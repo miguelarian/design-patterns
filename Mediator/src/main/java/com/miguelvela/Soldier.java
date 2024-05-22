@@ -4,7 +4,7 @@ public class Soldier extends Player {
 
     private static final int POWER_POINTS = 10;
 
-    public Soldier(Mediator mediator, String playerId) {
+    public Soldier(GameMediator mediator, String playerId) {
         super(mediator, playerId);
     }
 

@@ -3,7 +3,7 @@ package com.miguelvela;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameServer implements Mediator {
+public class GameServer implements GameMediator {
 
     private List<Player> players;
 
