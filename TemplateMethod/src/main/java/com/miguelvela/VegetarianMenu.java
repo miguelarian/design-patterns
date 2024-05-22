@@ -1,4 +1,5 @@
-package com.miguelvela;public class VegetarianMenu extends Menu {
+package com.miguelvela;
+public class VegetarianMenu extends Menu {
 
         private String[] appetizers = {"Bruschetta", "Caprese Salad"};
         private String[] mains = {"Spaghetti Pomodoro", "Eggplant Parmesan", "Fettuccine Alfredo"};
@@ -6,22 +7,22 @@ package com.miguelvela;public class VegetarianMenu extends Menu {
         private double price = 12.00d;
 
         @Override
-        protected String name() {
+        protected final String name() {
             return "Vegetarian Menu";
         }
 
         @Override
-        protected String appetizer() {
+        protected final String appetizer() {
             return String.join(", ", appetizers);
         }
 
         @Override
-        protected String main() {
+        protected final String main() {
             return String.join(", ", mains);
         }
 
         @Override
-        protected String dessert() {
+        protected final String dessert() {
             return String.join(", ", desserts);
         }
 

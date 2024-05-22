@@ -13,22 +13,22 @@ public class StandardMenu extends Menu {
     }
 
     @Override
-    protected String appetizer() {
+    protected final String appetizer() {
         return String.join(", ", appetizers);
     }
 
     @Override
-    protected String main() {
+    protected final String main() {
         return String.join(", ", mains);
     }
 
     @Override
-    protected String dessert() {
+    protected final String dessert() {
         return String.join(", ", desserts);
     }
 
     @Override
-    protected double price() {
+    protected final double price() {
         return price;
     }
 }
