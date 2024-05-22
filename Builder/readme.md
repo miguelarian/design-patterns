@@ -10,6 +10,93 @@ A third version was also added using [Lombok project](https://www.baeldung.com/i
 
 ![class-diagram-classic](class-diagram-classic.svg)
 
+## Example
+
+Main.java:
+
+```java
+MenuBuilder americanMenuBuilder = new AmericanMenuBuilder();
+americanMenuBuilder.beverage("Cola");
+americanMenuBuilder.appetizer("Chicken Wings");
+americanMenuBuilder.main("Burger");
+americanMenuBuilder.side("Fries");
+americanMenuBuilder.dessert("Milkshake");
+
+Menu americanMenu = americanMenuBuilder.order();
+System.out.println(americanMenu);
+
+MenuBuilder italianMenuBuilder = new ItalianMenuBuilder();
+italianMenuBuilder.beverage("Spritz");
+italianMenuBuilder.appetizer("Focaccia");
+italianMenuBuilder.main("Pizza Margarita");
+italianMenuBuilder.side("Caprese Salad");
+italianMenuBuilder.dessert("Pandoro");
+
+Menu italianMenu = italianMenuBuilder.order();
+System.out.println(italianMenu);
+```
+Output:
+
+```bash
+Menu{appetizer='Chicken Wings', main='Burger', side='Fries', beverage='Cola', dessert='Milkshake'}
+Menu{appetizer='Focaccia', main='Pizza Margarita', side='Caprese Salad', beverage='Spritz', dessert='Pandoro'}
+```
+
 ## Builder pattern (fluent version)
 
 ![class-diagram-fluent](class-diagram-fluent.svg)
+
+## Example
+
+Main.java:
+
+```java
+Pizza customPizza = new PizzaBuilder()
+                .withAmericanBase()
+                .withTomatoSauce()
+                .addTopping("york")
+                .addTopping("cheese")
+                .addTopping("mushroom")
+                .cookPizza();
+System.out.println("My custom pizza: " + customPizza);
+
+Pizza cheesyPizza = new PizzaBuilder()
+                    .cookCheesyPizza();
+System.out.println("A cheesy pizza: " + cheesyPizza);
+
+Pizza pepperoniPizza = new PizzaBuilder()
+                    .cookPepperoniPizza();
+System.out.println("A pepperoni pizza: " + pepperoniPizza);
+```
+Output:
+
+```bash
+My custom pizza: american, tomato, york, cheese, mushroom
+A cheesy pizza: thin, tomato, cheese, cheese, cheese
+A pepperoni pizza: standard, tomato, cheese, pepperoni, chorizo
+```
+
+## Builder pattern (Lombok)
+
+About [project Lombok](https://projectlombok.org/features/Builder)
+
+## Example
+
+Main.java:
+
+```java
+Menu menu = Menu.builder()
+                .beverage("Cola")
+                .appetizers("Chicken Wings")
+                .side("Fries")
+                .main("Cheese Burger")
+                .dessert("Milkshake")
+                .build();
+
+System.out.println(menu);
+```
+Output:
+
+```bash
+Menu{appetizers='Chicken Wings', main='Cheese Burger', side='Fries', beverage='Cola', dessert='Milkshake'}
+```
