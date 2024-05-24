@@ -1,0 +1,33 @@
+@startuml class-diagram
+class Trip {
+    - id : UUID
+    - flightBookingId : UUID
+    - hotelBookingId : UUID
+    - carBookingId : UUID
+    + UUID getId()
+    + UUID getFlightBookingId()
+    + UUID getHotelBookingId()
+    + UUID getCarBookingId()
+}
+class HotelBooking {
+    + UUID bookHotel()
+}
+class CarRental {
+    + UUID rentCar()
+}
+class FlightBooking {
+    + UUID bookFlight()
+}
+class TravelAgencyFacade {
+    - flightBooking : FlightBooking
+    - hotelBooking : HotelBooking
+    - carRental : CarRental
+    + Trip bookTrip()
+}
+class Main
+Main --right-> TravelAgencyFacade : operates
+TravelAgencyFacade -right[dotted]-> Trip : sells
+TravelAgencyFacade *--> FlightBooking : books-flights
+TravelAgencyFacade *--> CarRental : books-cars
+TravelAgencyFacade *--> HotelBooking : books-hotels
+@enduml
