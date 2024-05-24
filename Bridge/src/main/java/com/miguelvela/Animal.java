@@ -2,7 +2,7 @@ package com.miguelvela;
 
 public abstract class Animal {
 
-    private SoundBehaviour soundBehaviour;
+    private final SoundBehaviour soundBehaviour;
 
     public Animal(SoundBehaviour soundBehavior) {
         this.soundBehaviour = soundBehavior;
