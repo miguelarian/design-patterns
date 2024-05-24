@@ -1,7 +1,6 @@
 package com.miguelvela;
 
 import java.util.List;
-import java.util.Optional;
 
 public class UserRepositoryImpl implements UserRepository {
 

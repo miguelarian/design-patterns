@@ -1,7 +1,5 @@
 package com.miguelvela;
 
-import java.util.List;
-
 public abstract class UserRepositoryDecorator implements UserRepository {
 
     private UserRepository userRepository;
