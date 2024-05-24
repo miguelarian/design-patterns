@@ -1,0 +1,33 @@
+@startuml class-diagram
+abstract class Animal {
+    - soundBehaviour : SoundBehaviour
+    + String {abstract} sayHi()
+    + void performSound()
+}
+class Dog extends Animal {
+    + String sayHi()
+    + void performSound()
+}
+class Cat extends Animal {
+    + String sayHi()
+    + void performSound()
+}
+interface SoundBehaviour {
+    void makeSound()
+}
+class GermanShepherdBehaviour implements SoundBehaviour {
+    + void makeSound()
+}
+class SiberianHuskyBehaviour implements SoundBehaviour {
+    + void makeSound()
+}
+class PersianCatBehaviour implements SoundBehaviour {
+    + void makeSound()
+}
+class SiamesCatBehaviour implements SoundBehaviour {
+    + void makeSound()
+}
+class Main
+Main --right-> Animal : leads
+Animal::soundBehaviour *-right-> SoundBehaviour : has-a
+@enduml
