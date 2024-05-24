@@ -23,6 +23,7 @@ I created this repository for that purpose. The examples may not be perfect or d
   - [Composite](./Composite/readme.md)
   - [Proxy](./Proxy/readme.md)
   - [Facade](./Facade/readme.md)
+  - [Bridge](./Bridge/readme.md)
 - Behavioural patterns
   - [State](./State/readme.md)
   - [Strategy](./Strategy/readme.md)
