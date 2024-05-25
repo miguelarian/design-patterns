@@ -24,6 +24,7 @@ I created this repository for that purpose. The examples may not be perfect or d
   - [Proxy](./Proxy/readme.md)
   - [Facade](./Facade/readme.md)
   - [Bridge](./Bridge/readme.md)
+  - [Flyweight](./Flyweight/readme.md)
 - Behavioural patterns
   - [State](./State/readme.md)
   - [Strategy](./Strategy/readme.md)
