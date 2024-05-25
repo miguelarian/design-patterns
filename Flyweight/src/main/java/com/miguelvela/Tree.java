@@ -5,10 +5,10 @@ public class Tree {
     private int y;
     private TreeType type;
 
-    public Tree(int x, int y, TreeType type) {
+    public Tree(int x, int y, String name, String color, String texture) {
         this.x = x;
         this.y = y;
-        this.type = type;
+        this.type = TreeFactory.getTreeType(name, color, texture);
     }
 
     public void draw() {
