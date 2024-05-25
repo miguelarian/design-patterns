@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d512b13-e614-4abe-b0f0-79ac7e4a25d3" name="Changes" comment="add IDE project files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/miguelvela/Tree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/miguelvela/TreeFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/miguelvela/TreeType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/miguelvela/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miguelvela/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="3d512b13-e614-4abe-b0f0-79ac7e4a25d3" name="Changes" comment="add flyweight code example with trees" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,11 +95,28 @@
       <option name="project" value="LOCAL" />
       <updated>1716652994875</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add IDE project files">
+      <option name="closed" value="true" />
+      <created>1716656000704</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716656000704</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add flyweight code example with trees">
+      <option name="closed" value="true" />
+      <created>1716656014364</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716656014364</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add IDE project files" />
-    <option name="LAST_COMMIT_MESSAGE" value="add IDE project files" />
+    <MESSAGE value="add flyweight code example with trees" />
+    <option name="LAST_COMMIT_MESSAGE" value="add flyweight code example with trees" />
   </component>
 </project>
