@@ -34,6 +34,7 @@ I created this repository for that purpose. The examples may not be perfect or d
   - [Mediator](./Mediator/readme.md)
   - [Template Method](./TemplateMethod/readme.md)
   - [Command](./Command/readme.md)
+  - [Memento](./Memento/readme.md)
 
 ## Class diagrams generation
 
