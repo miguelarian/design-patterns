@@ -1,0 +1,60 @@
+@startuml class-diagram
+class Ligth {
+    - intensity : int
+    - MAX_INTENSITY : int
+    - MIN_INTENSITY : int
+    - DIM_STEP : int
+    + void turnOn()
+    + void turnOff()
+    + void dimUp()
+    + void dimDown()
+    - void printIntensity()
+}
+interface Command {
+    void execute()
+    void undo()
+}
+class CommandHistory {
+    - commandsHistory : Deque<Command>
+    + push(Command command)
+    + Optional<Command> pop()
+}
+class RemoteControl {
+    - turnOn : Command
+    - turnOff : Command
+    - dimUp : Command
+    - dimDown : Command
+    - commandsHistory : CommandHistory
+    + void turnOn()
+    + void turnff()
+    + void dimUp()
+    + void dimDown()
+    + void undo()
+}
+class TurnOnCommand implements Command {
+    - light : Ligth
+    + void execute()
+    + void undo()
+}
+class TurnOffCommand implements Command {
+    - light : Ligth
+    + void execute()
+    + void undo()
+}
+class DimUpCommand implements Command {
+    - light : Ligth
+    + void execute()
+    + void undo()
+}
+class DimDownCommand implements Command {
+    - light : Ligth
+    + void execute()
+    + void undo()
+}
+class Main
+Main --right-> RemoteControl : uses
+RemoteControl -right[dotted]-> Command : execute
+RemoteControl::commandsHistory o--> CommandHistory : has-a
+RemoteControl -right[dotted]-> Ligth : modifies
+Command -left[dotted]-> Ligth : modifies
+@enduml
