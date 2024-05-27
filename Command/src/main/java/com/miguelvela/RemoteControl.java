@@ -45,11 +45,11 @@ public class RemoteControl {
     public void undo() {
         Optional<Command> undoneCommand = this.commandHistory.pop();
 
-        undoneCommand.ifPresent(command -> {
+        undoneCommand
+        .ifPresentOrElse(command -> {
             System.out.println("Undoing the last command: " + command.getClass().getSimpleName());
             command.undo();
-        });
-
-        System.out.println("Nothing to undo");
+        },
+        () -> System.out.println("Nothing to undo"));
     }
 }
