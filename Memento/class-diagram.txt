@@ -1,0 +1,36 @@
+@startuml class-diagram
+class Game {
+    - level : int
+    - healthPoints : int
+    + void loadSavedGame(SavedGame savedGame)
+    + SavedGame saveGame(String savedGameName)
+}
+class GameRunner {
+    - savedGames : List<GameSaved>
+    + void loadSavedGame(String savedGameName)
+    + void showSavedGames()
+    + void saveGame(SavedGame savedGame)
+    + void increaseLevel()
+    + void decreaseHealthPoints()
+    + void increaseHealthPoints()
+}
+interface Memento {
+    int getLevel()
+    int getHealthPoints()
+    void restore()
+}
+class SavedGame implements Memento {
+    - name : String
+    - level : int
+    - healthPoints : int
+    - game : Game
+    + int getLevel()
+    + int getHealthPoints()
+}
+class Main
+Main --right[dotted]-> GameRunner : operates
+Main --right-> Game : plays
+Game --right[dotted]-> Memento : saves
+GameRunner::savedGames o--left-> Memento : restores
+SavedGame::game -left[dotted]-> Game : restores
+@enduml
