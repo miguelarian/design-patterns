@@ -7,8 +7,8 @@ import java.util.Optional;
 public class CommandHistory {
     private final Deque<Command> commandsHistory = new ArrayDeque<>();
 
-    public void push(Command c) {
-        commandsHistory.push(c);
+    public void push(Command command) {
+        commandsHistory.push(command);
     }
 
     public Optional<Command> pop() {
