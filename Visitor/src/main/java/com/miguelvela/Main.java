@@ -11,8 +11,6 @@ public class Main {
         animals.forEach(photographer::takePhoto);
 
         System.out.println("Double dispatch: Photographer::takePhoto(Cat/Dog xxx) method used");
-        animals.forEach(animal -> {
-            animal.accept(photographer);
-        });
+        animals.forEach(animal -> animal.accept(photographer));
     }
 }
