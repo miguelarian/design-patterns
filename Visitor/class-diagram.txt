@@ -1,0 +1,28 @@
+@startuml class-diagram
+interface Photographable {
+    void accept(Photographer photographer)
+}
+class Animal implements Photographable {
+    + String smile()
+    + void accept(Photographer photographer)
+}
+class Dog extends Animal {
+    + String smile()
+    + void accept(Photographer photographer)
+}
+class Cat extends Animal {
+    + String smile()
+    + void accept(Photographer photographer)
+}
+class Photographer {
+    + void takePhoto(Animal animal)
+    + void takePhoto(Dog dog)
+    + void takePhoto(Cat cat)
+}
+class Main
+Main --[dotted]-> Animal : creates
+Main --[dotted]-> Photographer : takes-photos
+Animal --left[dotted]-> Photographer : accepts
+Photographer --[dotted]-> Dog : visits
+Photographer --[dotted]-> Cat : visits
+@enduml
